@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <style>
+        /* Existing styles... */
+        .project-box, .service-info {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 20px;
+        }
+        .project-card, .service-card {
+            flex: 1 1 calc(33% - 20px);
+            background: #000;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+        .project-card img, .service-card img {
+            width: 100%;
+            height: auto;
+        }
+        .project-card h3, .service-card h3 {
+            margin: 15px 0 10px;
+            font-size: 3rem;
+            color: #ede9e9;
+        }
+        .project-card p, .service-card p {
+            padding: 0 15px 15px;
+            font-size: 1.5em;
+            color: #f7f6f6;
+        }
+        .project-card:hover, .service-card:hover {
+            transform: translateY(-10px);
+        }
+        .heading, .text {
+            font-size: 3rem;
+            text-align: center;
+            margin-bottom: 20px;
+            color: #000;
+        }
+        .social-icon .bx {
+            font-size: 3rem;
+            margin: 0 10px;
+            color: #fff;
+            transition: color 0.3s;
+        }
+        .social-icon .bx:hover {
+            color: #ff4757;
+        }
+        /* New styles for contact form */
+        .contact {
+            background: #000;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        .contact h2 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .contact-form input, .contact-form textarea {
+            padding: 10px;
+            font-size: 1.2rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            width: 100%;
+        }
+        .contact-form button {
+            padding: 10px;
+            font-size: 1.5rem;
+            background: #000;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .contact-form button:hover {
+            background: #ff4757;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <a href="#home" class="logo">Swagat <span>Dhakal</span></a>
+        <i class="bx bx-menu" id="menu-icon"></i>
+        <nav class="navbar">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+    <section class="home" id="home">
+        <div class="home-content">
+            <div class="text-side">
+                <h1>Hey, it's <span>Swagat</span></h1>
+                <h3 class="text">I'm an App Developer</h3>
+                <p>Hello, I'm Swagat, a passionate App Developer specializing in Python and React Native. I love creating innovative, user-friendly mobile applications for both Android and iOS platforms. Let's connect and build something amazing together!</p>
+                <div class="social-icon">
+                    <a href="#"><i class="bx bxl-instagram-alt"></i></a>
+                    <a href="#"><i class="bx bxl-youtube"></i></a>
+                    <a href="#"><i class="bx bxl-linkedin"></i></a>
+                    <a href="#"><i class="bx bxl-github"></i></a>
+                    <a href="#"><i class="bx bxl-twitter"></i></a>
+                </div>
+                <div class="btn-group">
+                    <a href="#" class="btn">Hire</a>
+                    <a href="#" class="btn">Contact</a>
+                </div>
+            </div>
+            <div class="image-side">
+                <img src="Dp.PNG" class="profile-pic" alt="Profile Picture"/>
+            </div>
+        </div>
+    </section>
+    <section class="about" id="about">
+        <div class="about-content">
+            <h2>About <span>Me</span></h2>
+            <p>Hello, I'm Swagat, an App Developer specializing in Python and React Native. I've created fintech and crypto apps, and have extensive experience in the fitness industry. While I can build all types of applications, I particularly enjoy tackling challenges in these fields. Let's connect and make something amazing!</p>
+            <a href="#" class="gradient-btn">Read More</a>
+        </div>
+        <div class="about-img">
+            <img src="Dp.PNG" class="profile-pic" alt="Profile Picture"/>
+        </div>
+    </section>
+    <section class="services" id="services">
+        <h2 class="text"><span>Services</span></h2>
+        <div class="service-info">
+            <div class="social-icon">
+                <i class="bx bxl-python"></i>
+                <i class="bx bxl-react"></i>
+                <i class="bx bxl-figma"></i>
+            </div>
+
+            <div class="service-card">
+                <img src="python.jpg" alt="Python" class="service-img">
+                <h3>Python</h3>
+                <p>As a proficient Python developer, I craft efficient, scalable, and reliable code. My expertise spans web development, data analysis, and automation. Let's collaborate!</p>
+            </div>
+            <div class="service-card">
+                <img src="ui.jpg" alt="UI Designer" class="service-img">
+                <h3>UI Designer</h3>
+                <p>I create visually appealing, user-friendly interfaces using tools like Figma and Adobe XD to enhance user experiences.</p>
+            </div>
+            <div class="service-card">
+                <img src="react.jpg" alt="React Native" class="service-img">
+                <h3>React Native</h3>
+                <p>I build high-performance mobile apps for both Android and iOS with seamless user experiences and scalable solutions.</p>
+            </div>
+        </div>
+    </section>
+    <section class="projects" id="projects">
+        <h2 class="heading"><span>Projects</span></h2>    
+        <div class="project-box">
+            <div class="project-card">
+                <img src="project1.jpg" alt="Project 1">
+                <h3>Project 1</h3>
+                <p>
+                    Introducing SavvyAI, your intelligent savings partner. This innovative app analyzes your spending habits, identifies saving opportunities, and automates deposits to help you reach your financial goals effortlessly. With personalized tips and real-time progress tracking, SavvyAI ensures you stay on track to achieve your dreams without breaking a sweat. Experience the future of financial management today!
+                </p>
+            </div>
+            <div class="project-card">
+                <img src="project2.jpg" alt="Project 2">
+                <h3>Project 2</h3>
+                <p>
+                    Discover FitLife, your ultimate fitness companion. This innovative app tracks your workouts, monitors your nutrition, and provides personalized fitness plans tailored to your goals. With real-time feedback and motivation, FitLife helps you stay committed to your health journey, making fitness fun and accessible for everyone. Start your transformation today with FitLife!
+                </p>
+            </div>
+            <div class="project-card">
+                <img src="project3.jpg" alt="Project 3">
+                <h3>Project 3</h3>
+                <p>
+                    Meet CryptoPro, your savvy crypto investment ally. This app provides real-time market analysis, tracks your portfolio, and offers strategic insights to maximize your returns. Whether you're a seasoned investor or new to the crypto world, CryptoPro ensures you stay ahead with informed decisions and smart investment strategies. Dive into the future of finance with CryptoPro!
+                </p>
+            </div>
+            <div class="project-card">
+                <img src="project4.png" alt="Project 4">
+                <h3>Project 4</h3>
+                <p>
+                    Introducing AIWallet, your smart financial companion. This cutting-edge app securely manages your digital assets, tracks your spending, and offers personalized investment advice. With real-time analytics and advanced security features, AIWallet ensures your financial transactions are smooth and secure, helping you make informed decisions and grow your wealth effortlessly. Step into the future of finance with AIWallet!
+                </p>
+            </div>
+            <div class="project-card">
+                <img src="project5.jpg" alt="Project 5">
+                <h3>Project 5</h3>
+                <p>
+                    Meet NutriTrack, your ultimate nutrition companion. This innovative app helps you monitor your dietary intake, provides personalized meal plans, and offers real-time feedback on your nutritional habits. With a vast database of foods and an easy-to-use interface, NutriTrack ensures you stay on track with your health goals, making healthy eating simple and enjoyable. Transform your lifestyle with NutriTrack!
+                </p>
+            </div>
+        </div>   
+    </section>
+    <section class="contact" id="contact">
+        <h2>Contact <span>Me</span></h2>
+        <form class="contact-form">
+            <input type="email" placeholder="Your Email" required>
+            <input type="text" placeholder="Your Contact Number" required>
+            <textarea placeholder="Brief Description of Your Project" rows="5" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Swagat Dhakal. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
